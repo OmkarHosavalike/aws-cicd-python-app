@@ -21,3 +21,8 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully!"
+      - chmod +x deploy.sh
+artifacts:
+  files:
+    - deploy.sh
+    - deployspec.yml
