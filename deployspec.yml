@@ -2,7 +2,7 @@ version: 0.1
 files:
   - source: deploy.sh
     destination: /tmp/deploy
-hooks:
-  AfterExtract:
+scripts:
+  AfterDeploy:
     - location: /tmp/deploy/deploy.sh
       runas: ubuntu
