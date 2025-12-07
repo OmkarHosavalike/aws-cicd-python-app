@@ -1,6 +1,8 @@
 version: 0.1
-phases:
-  on-deploy:
-    commands:
-      - chmod +x deploy.sh
-      - ./deploy.sh
+files:
+  - source: deploy.sh
+    destination: /tmp/deploy
+hooks:
+  AfterExtract:
+    - location: /tmp/deploy/deploy.sh
+      runas: ubuntu
