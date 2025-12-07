@@ -4,5 +4,7 @@ files:
     destination: /tmp/deploy
 scripts:
   AfterDeploy:
-    - location: /tmp/deploy/deploy.sh
+    - location: /bin/bash
       runas: ubuntu
+      arguments:
+        - "/tmp/deploy/deploy.sh"
