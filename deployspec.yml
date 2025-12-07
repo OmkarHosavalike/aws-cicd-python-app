@@ -2,6 +2,14 @@ version: 0.1
 files:
   - source: deploy.sh
     destination: /tmp/deploy
+permissions:
+  - object: /tmp/deploy
+    pattern: "deploy.sh"
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - file
 scripts:
   AfterDeploy:
     - location: /tmp/deploy/deploy.sh
