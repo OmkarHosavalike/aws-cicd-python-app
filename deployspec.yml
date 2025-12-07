@@ -2,15 +2,9 @@ version: 0.1
 files:
   - source: deploy.sh
     destination: /tmp/deploy
-permissions:
-  - object: /tmp/deploy
-    pattern: "deploy.sh"
-    owner: root
-    group: root
-    mode: 777
-    type:
-      - file
+  - source: wrapper.sh
+    destination: /tmp/deploy
 scripts:
   AfterDeploy:
-    - location: /tmp/deploy/deploy.sh
+    - location: /tmp/deploy/wrapper.sh
       runas: ubuntu
