@@ -1,0 +1,6 @@
+version: 0.1
+phases:
+  on-deploy:
+    commands:
+      - chmod +x deploy.sh
+      - ./deploy.sh
