@@ -41,12 +41,11 @@ GitHub → CodePipeline → CodeBuild → EC2 Deploy
 
 ## AWS Systems Manager Parameter Store
 
-The following parameters are required in **Parameter Store** for Docker Hub credentials:
+The following parameters are required in **Parameter Store** for Docker Hub credentials that are referenced by CodeBuild to authenticate and push Docker images.
 
 - /myapp/docker-credentials/username
 - /myapp/docker-credentials/password
 - /myapp/docker-registry/url
-These are referenced by CodeBuild to authenticate and push Docker images.
 
 ---
 
@@ -78,5 +77,5 @@ sudo snap services amazon-ssm-agent
 - The pipeline triggers automatically when code is pushed to the GitHub repo (via webhook).
 
 - The EC2 instance used for deployment:
-    -  must have port 5000 inbound open from anywhere(IPv4)
-    -  must have Docker installed and SSM Agent running
+    -  must have port 5000 inbound open from anywhere(IPv4).
+    -  must have Docker installed and SSM Agent running.
