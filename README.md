@@ -79,3 +79,6 @@ sudo snap services amazon-ssm-agent
 - The EC2 instance used for deployment:
     -  must have port 5000 inbound open from anywhere(IPv4).
     -  must have Docker installed and SSM Agent running.
+
+- Replace this with your own Docker username and image name in deploy.sh
+  docker_image="homkar8/aws-cicd-python-app:latest"
