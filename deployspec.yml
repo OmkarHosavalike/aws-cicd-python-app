@@ -1,8 +1,0 @@
-version: 0.1
-files:
-  - source: deploy.sh
-    destination: /tmp/deploy
-scripts:
-  AfterDeploy:
-    - location: /tmp/deploy/deploy.sh
-      runas: ubuntu
