@@ -81,4 +81,4 @@ sudo snap services amazon-ssm-agent
     -  must have Docker installed and SSM Agent running.
 
 - Replace this with your own Docker username and image name in deploy.sh
-  docker_image="homkar8/aws-cicd-python-app:latest"
+    - docker_image="homkar8/aws-cicd-python-app:latest"
