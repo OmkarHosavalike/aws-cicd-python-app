@@ -22,7 +22,7 @@ GitHub → CodePipeline → CodeBuild → EC2 Deploy
 
 ## IAM Roles & Policies
 
-### **CodeBuild Role (`codebuild-aws-cicd-app-build-service-role`)**
+### **CodeBuild Role**
 - `AmazonSSMReadOnlyAccess`
 - `CloudWatchFullAccess`
 
@@ -33,7 +33,7 @@ GitHub → CodePipeline → CodeBuild → EC2 Deploy
 - `CloudWatchFullAccess`
 - Additional policies for integration with **CodeBuild**, **CodeStar**, and **Code Connection** if not automatically attached.
 
-### **EC2 Role (`aws-cicd-ec2-role`)**
+### **EC2 Role**
 - `AmazonS3FullAccess`
 - `AmazonSSMManagedInstanceCore`
 
@@ -46,8 +46,7 @@ The following parameters are required in **Parameter Store** for Docker Hub cred
 - /myapp/docker-credentials/username
 - /myapp/docker-credentials/password
 - /myapp/docker-registry/url
-
-- These are referenced by CodeBuild to authenticate and push Docker images.
+These are referenced by CodeBuild to authenticate and push Docker images.
 
 ---
 
@@ -73,8 +72,6 @@ sudo snap services amazon-ssm-agent
 ```
 
 ---
-
-Note: 
 
 ## Notes
 
